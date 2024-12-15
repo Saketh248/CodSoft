@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+
+  #calculator {
+ width: 200px;
+ margin: 0 auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ background: #f9f9f9;
+ }
+
+ #display {
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 10px;
+ font-size: 20px;
+ border: none;
+ border-radius: 5px;
+ text-align: right;
+ }
+
+ #buttons {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-gap: 10px;
+ }
+
+ #buttons button {
+ padding: 10px;
+ border-radius: 6px;
+ border: none;
+ font-size: 20px;
+ cursor: pointer;
+ background-color: #eee;
+ }
+ #buttons button:active {
+    transform : scale(0.99);
+ }
+ .operator {
+  color:#2f9fff;
+ }
+  </style>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+    <div id="buttons">
+      <button onclick="appendText('1')">1</button>
+      <button onclick="appendText('2')">2</button>
+      <button onclick="appendText('3')">3</button>
+      <button onclick="appendText('+')" class="operator">+</button>
+      <button onclick="appendText('4')">4</button>
+      <button onclick="appendText('5')">5</button>
+      <button onclick="appendText('6')">6</button>
+      <button onclick="appendText('-')" class="operator">-</button>
+      <button onclick="appendText('7')">7</button>
+      <button onclick="appendText('8')">8</button>
+      <button onclick="appendText('9')">9</button>
+      <button onclick="appendText('*')" class="operator">*</button>
+      <button onclick="appendText('0')">0</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculate()" class="operator">=</button>
+      <button onclick="appendText('/')" class="operator">/</button>
+    </div>
+  </div>
+
+  <script src="cal.js"></script>
+</body>
+</html>
